@@ -1,0 +1,8 @@
+version: '3'
+services:
+  tf-sandbox:
+    build: .
+    volumes:
+      - .:/workspace
+    # コンテナを実行中にするための処理
+    command: tail -f /dev/null
