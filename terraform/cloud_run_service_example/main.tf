@@ -2,8 +2,8 @@
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloud_run_v2_service
 resource "google_cloud_run_v2_service" "default" {
   project  = var.google_project_id
+  location = var.google_primary_region
   name     = "cloudrun-service"
-  location = "us-central1"
   ingress  = "INGRESS_TRAFFIC_ALL"
 
   template {
